@@ -34,4 +34,26 @@ button.on("clilck",() => {
     console.log(dateFilter)
     console.log(cityFilter)
     console.log(dataFilter)
+
+    tbody.html("");
+
+    let response = {
+        dataFilter, cityFilter, dateFilter
+    }
+
+    if (response.dataFilter.length !==0){
+        populate(dataFilter);
+    }
+        else if (response.dataFilter.length === 0 && ((respnse.cityFilter.length !==0 || response.dateFilter.length !== 0))){
+            populate(cityFilter) || populate(dateFilter);
+        }
+        else {
+            tbody.append("tr").append("td").text("Could not find any matching results")
+        }
+})
+
+resetbutton.on("click", () => {
+    tbody.html("");
+    populate(data)
+    console.log("Table Cleared")
 })
