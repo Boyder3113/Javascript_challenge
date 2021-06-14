@@ -10,3 +10,8 @@ var resetbutton = d3.select("#reset-btn");
 var inputField = d3.select("#datetime");
 var inputcity = d3.select("#city");
 var columns = ["datetime", "city", "state", "country", "shape", "durationMinutes", "comments"]
+
+var populateTable = (dataInput) => {
+
+    
+}
