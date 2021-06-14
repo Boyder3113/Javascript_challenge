@@ -13,5 +13,10 @@ var columns = ["datetime", "city", "state", "country", "shape", "durationMinutes
 
 var populateTable = (dataInput) => {
 
-    
+    dataInput.forEach(ufo_sightings => {
+        var row = tbody.append("tr");
+        columns.forEach(column => row.append("td").text(ufo_sightings[column])
+        )
+    });
 }
+
