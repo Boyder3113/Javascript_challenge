@@ -27,7 +27,7 @@ populateTable(data);
 button.on("click", () => {
     d3.event.preventDefault();
     var inputDate = inputFieldDate.property("value").trim();
-    //var inputCity = inputFieldCity.property("value").toLowerCase().trim();
+    var inputCity = inputFieldCity.property("value").toLowerCase().trim();
     //var dateFilter = data.filter(data => data.datetime === inputDate);
     console.log(dateFilter)
     //var cityFilter = data.filter(data => data.city === inputCity);
