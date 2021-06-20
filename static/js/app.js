@@ -34,9 +34,6 @@ button.on("click", () => {
     console.log(cityFilter)
     var dataFilter = data.filter(data => data.datetime === inputDate || data.city === inputCity);
     console.log(dataFilter)
-    //console.log(dateFilter)
-    //console.log(cityFilter)
-    //console.log(dataFilter)
 
     tbody.html("");
 
