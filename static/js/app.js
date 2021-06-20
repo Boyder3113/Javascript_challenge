@@ -24,36 +24,39 @@ var populateTable = (dataInput) => {
 populateTable(data);
 
 //Filter the data
-button.on("clilck",() => {
+button.on("click", () => {
     d3.event.preventDefault();
     var inputDate = inputFieldDate.property("value").trim();
-    var inputCity = inputfieldCity.property("value").toLowerCase().trim();
-    var dateFilter = data.filter(data => data.datetime === inputDate);
-    var cityFilter = data.filter(data => data.city === inputCity);
-    var dataFilter = data.filter(data => data.datetime === inputData && data.city === inputcity);
+    //var inputCity = inputFieldCity.property("value").toLowerCase().trim();
+    //var dateFilter = data.filter(data => data.datetime === inputDate);
     console.log(dateFilter)
+    //var cityFilter = data.filter(data => data.city === inputCity);
     console.log(cityFilter)
+    var dataFilter = data.filter(data => data.datetime === inputDate || data.city === inputCity);
     console.log(dataFilter)
+    //console.log(dateFilter)
+    //console.log(cityFilter)
+    //console.log(dataFilter)
 
     tbody.html("");
 
     let response = {
-        dataFilter, cityFilter, dateFilter
+        dataFilter, dateFilter
     }
 
     if (response.dataFilter.length !==0){
-        populate(dataFilter);
+        populateTable(dataFilter);
     }
         else if (response.dataFilter.length === 0 && ((respnse.cityFilter.length !==0 || response.dateFilter.length !== 0))){
-            populate(cityFilter) || populate(dateFilter);
+            populateTable(cityFilter) || populateTable(dateFilter);
         }
         else {
             tbody.append("tr").append("td").text("Could not find any matching results")
         }
-})
+});
 
 resetbutton.on("click", () => {
     tbody.html("");
-    populate(data)
+    populateTable(data)
     console.log("Table Cleared")
-})
+});
