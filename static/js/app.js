@@ -30,7 +30,7 @@ button.on("click", () => {
     var inputCity = inputFieldCity.property("value").toLowerCase().trim();
     var dateFilter = data.filter(data => data.datetime === inputDate);
     console.log(dateFilter)
-    //var cityFilter = data.filter(data => data.city === inputCity);
+    var cityFilter = data.filter(data => data.city === inputCity);
     console.log(cityFilter)
     var dataFilter = data.filter(data => data.datetime === inputDate || data.city === inputCity);
     console.log(dataFilter)
