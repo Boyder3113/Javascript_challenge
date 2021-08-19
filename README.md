@@ -8,6 +8,7 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
+    <li><a href="#project-screenshots">Project Screenshots</a></li>
     <li><a href="#built-with">Built With</a></li>
   </ol>
 </details>
@@ -22,6 +23,14 @@ Run the index.html file to gain access to a local database loaded into a JavaScr
 If a new siting occurs just add it to the data.js file to have it automatically appended to the website table.
 
 Keep watching the skies!
+
+<!-- Project Screenshots -->
+## Project Screenshots
+
+* UFO Tracking Sight W/ Filters
+
+  ![image](https://github.com/Boyder3113/Javascript_challenge/blob/main/Images/UFO%20Website.PNG?raw=true)
+
 
 <!-- BUILT WITH -->
 ## Built With
